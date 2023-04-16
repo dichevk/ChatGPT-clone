@@ -80,6 +80,18 @@ const handleSubmit = async(e) => {
     })
   })
   clearInterval(loadInterval);
+  messageDiv.innerHTML = '';
+  if (response.ok){
+    const data = await response.json();
+    const parsedData = data.bot.trim();
+
+    typeText(messageDiv, parsedData);
+  }
+  else{
+    const errorData = response.text();
+    messageDiv.innerHTML=errorData;
+    alert(errorData);
+  }
 }
 
 form.addEventListener('submit', handleSubmit);
