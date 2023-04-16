@@ -25,6 +25,9 @@ function typeText(element, text) {
       element.innerHTML += text.charAt(index);
       index++;
     }
+    else{
+      clearInterval(interval);
+    }
   }, 20);
 }
 
