@@ -1,1 +1,1 @@
-ChatGPT clone using vanillajs and openAPI
+ChatGPT clone using vanilla Js and the OpenAI API
